@@ -131,7 +131,7 @@
       }
       
       func main() {
-          let result = factorial(5)
+          let result = factorial(n: 5)
           print(result)  // Outputs: 120
       }
       
