@@ -6,7 +6,7 @@
 #### Core Features
 
 1. **Data Structures**
-   - **HashMaps**: Key-value collections supporting heterogeneous types.
+   - **Maps**: Key-value collections supporting heterogeneous types.
      ```lucid
      let user = {:name "Alice",
                  :age 30,
