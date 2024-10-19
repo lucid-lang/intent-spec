@@ -38,14 +38,6 @@
      }
      ```
    - **Gradual Typing**: Mix dynamic and static types within the same codebase.
-     ```swift
-     func process(data: Map<String, Any>, flag) -> Int {
-         if flag {
-             return data["count"] as Int
-         }
-         return 0
-     }
-     ```
 
 4. **Functional Programming**
    - **Higher-Order Functions**: Functions that accept or return other functions.
