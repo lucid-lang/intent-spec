@@ -1,6 +1,6 @@
 # Lucid: Intention Specification
 
-**Lucid** is a programming language that allows both dynamic and static typing, immutable data structures, atom-like state management, modern concurrency mechanisms, and seamless integration of S-expressions with C-like syntax. It transpiles directly to PHP, enabling execution within the PHP ecosystem.
+**Lucid** is a programming language that allows both dynamic and static typing, immutable data structures, atom-like state management, modern concurrency mechanisms, and seamless integration of S-expressions with C-like syntax. It transpiles to PHP, enabling execution within the PHP ecosystem.
 (I am not sure if guaranteeing interop is worth the effort.)
 
 #### Core Features
