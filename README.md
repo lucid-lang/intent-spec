@@ -90,7 +90,7 @@
              1
              (* n (factorial (- n 1)))))
      ```
-   - **Interoperability with Traditional Syntax**: Allows mixing S-expressions with standard code.
+   - **Interoperability with C-like Syntax**: Allows mixing S-expressions with standard code.
      ```scheme
      let greeting = "Hello, World!"
      
@@ -101,7 +101,7 @@
          printGreeting()
      }
      ```
-   - **Seamless Parsing**: Compiler/interpreter handles mixed S-expression and traditional syntax without errors.
+   - **Seamless Parsing**: Compiler/interpreter handles mixed S-expression and C-like Syntax without errors.
 
 10. **Transpilation to PHP**
     - **Compilation Process**: Transpiles Lucid source code into PHP code for execution within the PHP runtime.
@@ -224,7 +224,7 @@
      let result = square(5)
      print(result)  // Outputs: 25
      ```
-   - **Mixing with Traditional Syntax**:
+   - **Mixing with C-like Syntax**:
      ```scheme
      let message = "Factorial of 5 is: "
      
