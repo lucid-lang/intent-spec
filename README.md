@@ -7,38 +7,38 @@
 
 1. **Data Structures**
    - **Maps**: Key-value collections supporting heterogeneous types.
-     ```lucid
+     ```swift
      let user = {:name "Alice",
                  :age 30,
                  :preferences ["reading", "gaming"]}
      ```
    - **Vectors**: Ordered, indexable collections with mixed types.
-     ```lucid
+     ```swift
      let numbers = [1, 2, 3, "apple", "mango"]
      ```
 
 2. **Immutability and Persistence**
    - **Immutable by Default**: Data structures are immutable unless explicitly mutable.
    - **Persistent Structures**: Modifications generate new instances efficiently without full duplication.
-     ```lucid
+     ```swift
      let updatedUser = user.assoc(:age, 31)
      ```
 
 3. **Typing System**
    - **Dynamic Typing**: Define functions and variables without type annotations.
-     ```lucid
+     ```swift
      func greet(name) {
          return "Hello, " + name
      }
      ```
    - **Static Typing**: Optional type annotations for parameters and return types, enforced at compile-time.
-     ```lucid
+     ```swift
      func add(a: Int, b: Int) -> Int {
          return a + b
      }
      ```
    - **Gradual Typing**: Mix dynamic and static types within the same codebase.
-     ```lucid
+     ```swift
      func process(data: Map<String, Any>, flag) -> Int {
          if flag {
              return data["count"] as Int
@@ -51,22 +51,24 @@
    - **Higher-Order Functions**: Functions that accept or return other functions.
    - **Pure Functions**: Functions without side effects, ensuring predictability.
    - **Built-In Functions**: Includes `assoc`, `dissoc`, `conj`, `update`, `get` for data manipulation.
-     ```lucid
+     ```swift
      let newColors = colors.conj("yellow")
      ```
 
 5. **Concurrency Model**
    - **Atom**: Manages shared, mutable state safely.
-     ```lucid
+     ```swift
      let counter = Atom({:count 0})
-     counter.swap { data in data.assoc(:count, data["count"] + 1) }
+     counter.swap { data in
+        data.assoc(:count, data["count"] + 1)
+     }
      ```
    - **Thread Safety**: Immutable data structures prevent race conditions.
    - **Structured Concurrency**: Supports asynchronous operations and task management.
 
 6. **Macro System**
    - **Metaprogramming**: Enables code generation and transformation.
-     ```lucid
+     ```swift
      macro unless(condition, block) {
          return if (!condition) { block }
      }
@@ -82,7 +84,7 @@
 
 8. **Interoperability**
    - **Database Integration**: Native support for relational databases.
-     ```lucid
+     ```swift
      let db = Database.connect("relational.db")
      let users = db.query("SELECT * FROM users")
      ```
@@ -90,14 +92,14 @@
 
 9. **S-Expressions Integration**
    - **Native Support**: S-expressions are integral to Lucid's syntax.
-     ```lucid
+     ```scheme
      (define (factorial n)
          (if (<= n 1)
              1
              (* n (factorial (- n 1)))))
      ```
    - **Interoperability with Traditional Syntax**: Allows mixing S-expressions with standard code.
-     ```lucid
+     ```scheme
      let greeting = "Hello, World!"
      
      (define (printGreeting)
@@ -119,7 +121,7 @@
 
     **Example Transpilation:**
     - **Lucid Code:**
-      ```lucid
+      ```swift
       func factorial(n: Int) -> Int {
           if (n <= 1) {
               return 1
@@ -159,23 +161,23 @@
 
 1. **Defining Data Structures**
    - **HashMap**:
-     ```lucid
+     ```swift
      let product = {:id 101, :name "Laptop", :price 999.99, :tags ["electronics", "computers"]}
      ```
    - **Vector**:
-     ```lucid
+     ```swift
      let colors = ["red", "green", "blue", 42]
      ```
 
 2. **Function Definitions**
    - **Dynamic Typing**:
-     ```lucid
+     ```swift
      func concatenate(a, b) {
          return a + b
      }
      ```
    - **Static Typing**:
-     ```lucid
+     ```swift
      func multiply(a: Int, b: Int) -> Int {
          return a * b
      }
@@ -183,21 +185,21 @@
 
 3. **Data Manipulation**
    - **Add Key-Value Pair**:
-     ```lucid
+     ```swift
      let updatedProduct = product.assoc(:stock, 50)
      ```
    - **Remove Key**:
-     ```lucid
+     ```swift
      let simplifiedProduct = product.dissoc(:tags)
      ```
    - **Append to Vector**:
-     ```lucid
+     ```swift
      let newColors = colors.conj("yellow")
      ```
 
 4. **Concurrency Operations**
    - **Atomic State Management**:
-     ```lucid
+     ```swift
      let sharedState = Atom({:balance 1000})
      
      func deposit(amount: Int) {
@@ -211,7 +213,7 @@
 
 5. **Macro Usage**
    - **Conditional Macro**:
-     ```lucid
+     ```swift
      macro unless(condition, block) {
          return if (!condition) { block }
      }
@@ -223,7 +225,7 @@
 
 6. **S-Expressions Usage**
    - **Defining Functions with S-Expressions**:
-     ```lucid
+     ```scheme
      (define (square x)
          (* x x))
      
@@ -231,7 +233,7 @@
      print(result)  // Outputs: 25
      ```
    - **Mixing with Traditional Syntax**:
-     ```lucid
+     ```scheme
      let message = "Factorial of 5 is: "
      
      (define (factorial n)
