@@ -1,6 +1,4 @@
 # the-roadmap
-The Goal
-
 
 ### Lucid: The Intended Specification
 
